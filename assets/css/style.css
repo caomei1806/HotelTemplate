@@ -435,10 +435,42 @@ nav .navbar-nav .nav-item .nav-link.hover:before {
 }
 
 .location .location-description {
-  width: 50%;
+  width: 40%;
+  text-align: right;
+}
+
+.location .location-description h2 {
+  font-family: 'Roboto Slab';
+  color: #be7b40;
+  width: 70%;
+}
+
+.location .location-description h5 {
+  font-family: 'Nunito Sans';
+  line-height: 2rem;
+  color: #646464;
+  width: 70%;
 }
 
 .location .location-image {
-  width: 50%;
+  width: 40%;
+  height: 80%;
+  background-image: url("../img/sb1.png");
+  background-size: contain;
+  background-position: center;
+  -webkit-filter: hue-rotate(310deg);
+          filter: hue-rotate(310deg);
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+.location .location-image .text {
+  position: absolute;
+  top: 24%;
+  left: 46%;
+  font-weight: bold;
+  width: 20%;
+  color: #008060;
+  font-family: 'Roboto Slab';
 }
 /*# sourceMappingURL=style.css.map */

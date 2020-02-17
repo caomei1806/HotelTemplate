@@ -3,6 +3,7 @@ $font-mint: rgb(228, 245, 241);
 $black-green: rgb(10, 22, 15);
 $light-grey: rgb(194, 194, 194);
 $dark-grey: rgb(100, 100, 100);
+$almond-brown : #be7b40;
 body {
 	background-color: rgb(245, 245, 245);
 }
@@ -212,7 +213,7 @@ nav {
 		justify-content: space-evenly;
 		.text {
 			h2 {
-				color: #be7b40;
+				color: $almond-brown;
 				font-family: "Poppins";
 			}
 			#to-go {
@@ -263,7 +264,7 @@ nav {
 			border-radius: 0.3rem;
 			position: relative;
 			h3 {
-				color: #be7b40;
+				color: $almond-brown;
 				font-family: "Poppins";
 			}
 			p {
@@ -332,13 +333,41 @@ nav {
 .location{
 	display: flex;
 	align-items: center;
-	justify-content: center;
+	justify-content:center;
 	width: 100%;
 	height: 100vh;
 	.location-description{
-		width: 50%;
+		width: 40%;
+		text-align: right;
+		h2{
+			font-family: 'Roboto Slab';
+			color: $almond-brown;
+			width:70%;
+		}
+		h5{
+			font-family: 'Nunito Sans';
+			line-height: 2rem;
+			color: $dark-grey;
+			width:70%;
+		}
 	}
 	.location-image{
-		width:50%;
+		width:40%;
+		height: 80%;
+		background-image: url("../img/sb1.png");
+		background-size: contain;
+		background-position: center;
+		filter: hue-rotate(310deg);
+		background-repeat: no-repeat;
+		position: relative;
+		.text{
+			position: absolute;
+			top: 24%;
+			left:46%;
+			font-weight: bold;
+			width:20%;
+			color: rgb(0, 128, 96);
+			font-family: 'Roboto Slab';
+		}
 	}
 }
