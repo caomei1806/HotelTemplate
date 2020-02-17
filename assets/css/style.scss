@@ -10,7 +10,7 @@ body {
 .container {
 	max-width: 1500px;
 }
-
+//Navbar
 nav {
 	z-index: 50;
 	position: absolute !important;
@@ -58,6 +58,9 @@ nav {
 		}
 	}
 }
+//Navbar end
+
+//Welcome-box 
 #welcome-box {
 	background-image: url("../img/background.jpg");
 	background-size: cover;
@@ -117,6 +120,8 @@ nav {
 			}
 		}
 	}
+	//Welcome-box image end
+	//Search bar
 	.search-bar {
 		position: absolute;
 		background-color: rgba(255, 255, 255, 0.95);
@@ -159,7 +164,9 @@ nav {
 			}
 		}
 	}
+	//Search bar end
 }
+
 .search-box {
 	height: 90vh;
 	width: 100%;
@@ -167,6 +174,9 @@ nav {
 	align-items: top;
 	justify-content: center;
 	padding-top: 15rem;
+
+	//Hotel slideshow
+
 	.container {
 		width: 40%;
 		.img-box {
@@ -204,6 +214,8 @@ nav {
 				z-index: -5;
 			}
 		}
+
+		//Hotel slideshow end
 	}
 	.description-box {
 		width: 50%;
@@ -250,6 +262,7 @@ nav {
 			}
 		}
 	}
+	//Room info. The best section
 	.options-text {
 		width: 100%;
 		display: flex;
@@ -283,7 +296,9 @@ nav {
 			}
 		}
 	}
+	//Room info end
 }
+//Quotes slideshow
 .slide-show {
 	width: 100%;
 	height: 100vh;
@@ -330,6 +345,8 @@ nav {
 		}
 	}
 }
+//Quotes slideshow end
+//Map container
 .location {
 	display: flex;
 	align-items: center;
@@ -338,7 +355,7 @@ nav {
 	height: 100vh;
 	.location-description {
 		width: 40%;
-		text-align: right;
+		text-align: left;
 		h2 {
 			font-family: "Roboto Slab";
 			color: $almond-brown;
@@ -371,6 +388,8 @@ nav {
 		}
 	}
 }
+//Map location end
+//Footer with social media
 footer {
 	height: 100vh;
 	width: 100%;
@@ -382,15 +401,15 @@ footer {
 		width: 50%;
 		filter: brightness(1.1);
 	}
-	img:nth-child(3) {
+	.clouds:nth-child(3) {
 		top: -22%;
 		right: 75%;
 	}
-	img:nth-child(2) {
+	.clouds:nth-child(2) {
 		top: -30%;
 		right: 0%;
 	}
-	img:nth-child(4) {
+	.clouds:nth-child(4) {
 		top: -23%;
 		left: 10%;
 	}
@@ -408,4 +427,22 @@ footer {
 			rgba(255, 255, 255, 0) 100%
 		);
 	}
+	.social-media {
+		position: absolute;
+		bottom: 0;
+		width: 100%;
+		height: 10%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		img {
+			margin-right: 2rem;
+			position: relative;
+			width: 30px;
+		}
+		.logo:nth-child(3){
+			filter: hue-rotate(180deg);
+		}
+	}
 }
+//Footer and social media end
