@@ -1,0 +1,444 @@
+body {
+  background-color: whitesmoke;
+}
+
+.container {
+  max-width: 1500px;
+}
+
+nav {
+  z-index: 50;
+  position: absolute !important;
+}
+
+nav .navbar-brand {
+  font-family: "Alegreya";
+  color: #e4f5f1 !important;
+  font-size: 2.3rem;
+  position: absolute;
+}
+
+nav .navbar-nav .nav-item .nav-link {
+  font-family: "Catamaran";
+}
+
+nav .navbar-nav .nav-item .nav-link .syte-language:not(.active) {
+  color: #4cc5a7;
+}
+
+nav .navbar-nav .nav-item .nav-link.hover {
+  width: 90px;
+  text-align: center;
+  -webkit-transition: 0.2s all;
+  transition: 0.2s all;
+  position: relative;
+}
+
+nav .navbar-nav .nav-item .nav-link.hover:hover {
+  color: white;
+}
+
+nav .navbar-nav .nav-item .nav-link.hover:hover:before {
+  height: 100%;
+}
+
+nav .navbar-nav .nav-item .nav-link.hover:before {
+  z-index: -1;
+  -webkit-transition: 0.3s all;
+  transition: 0.3s all;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 0;
+  background-color: #4cc5a7;
+}
+
+#welcome-box {
+  background-image: url("../img/background.jpg");
+  background-size: cover;
+  height: 110vh;
+  width: 100%;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#welcome-box .fog {
+  display: none;
+  position: fixed;
+  width: 200%;
+  height: 200%;
+  background-image: url("/assets/img/fog.png");
+  background-size: 100%;
+  -webkit-animation-duration: 5s;
+          animation-duration: 5s;
+  opacity: 0.5;
+}
+
+#welcome-box .down-fog {
+  position: relative;
+  width: 150%;
+  height: 90%;
+  background-image: url("/assets/img/down-fog.png");
+  background-repeat: repeat-x;
+  background-size: 100%;
+  background-position: bottom;
+  -webkit-animation-duration: 15s;
+          animation-duration: 15s;
+  opacity: 0.3;
+}
+
+#welcome-box .container h1 {
+  font-family: "Roboto Slab";
+  color: #e4f5f1;
+  text-shadow: #0a160f 2px 2px 5px;
+}
+
+#welcome-box .container h1 #show-before {
+  -webkit-transition: 0.7s all;
+  transition: 0.7s all;
+  opacity: 0;
+  position: relative;
+}
+
+#welcome-box .container h1 #show-before[show] {
+  opacity: 1;
+}
+
+#welcome-box .container h1 .welcome-transition {
+  -webkit-transition: 0.7s all;
+  transition: 0.7s all;
+  overflow: hidden;
+  position: relative;
+  opacity: 0;
+  top: -20px;
+  color: #4cc5a7;
+  text-shadow: #0a160f -2px 1px 3px;
+}
+
+#welcome-box .container h1 .welcome-transition[show] {
+  opacity: 1;
+  top: 0;
+}
+
+#welcome-box .search-bar {
+  position: absolute;
+  background-color: rgba(255, 255, 255, 0.95);
+  width: 100%;
+  height: 20vh;
+  bottom: -10%;
+  -webkit-box-shadow: 0px 0px 50px 0px #c2c2c2;
+          box-shadow: 0px 0px 50px 0px #c2c2c2;
+  border-radius: 0.3rem;
+  font-family: "Roboto Slab";
+}
+
+#welcome-box .search-bar form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-align: left;
+      -ms-flex-align: left;
+          align-items: left;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -ms-flex-line-pack: justify;
+      align-content: space-between;
+}
+
+#welcome-box .search-bar .form-item {
+  display: inline-block;
+}
+
+#welcome-box .search-bar .form-item label {
+  color: #4cc5a7;
+  display: table-row;
+}
+
+#welcome-box .search-bar .form-item #submit-label {
+  visibility: hidden;
+}
+
+#welcome-box .search-bar .form-item input {
+  border-radius: 0.3rem;
+  text-indent: 0.5rem;
+  -webkit-box-shadow: 1px 1px 5px #c2c2c2;
+          box-shadow: 1px 1px 5px #c2c2c2;
+  color: #646464;
+  border-color: transparent;
+}
+
+#welcome-box .search-bar .form-item input[type="submit"] {
+  background-color: #4cc5a7;
+  color: #e4f5f1;
+  font-weight: bold;
+  font-family: "Catamaran";
+  text-indent: 0rem;
+  margin: 0.2rem;
+}
+
+.search-box {
+  height: 90vh;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: top;
+      -ms-flex-align: top;
+          align-items: top;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-top: 15rem;
+}
+
+.search-box .container {
+  width: 40%;
+}
+
+.search-box .container .img-box {
+  position: relative;
+}
+
+.search-box .container .img-box img {
+  opacity: 0;
+  -webkit-transition: 1s all;
+  transition: 1s all;
+  width: 100%;
+  height: auto;
+  position: absolute;
+  border-radius: 0.3rem;
+}
+
+.search-box .container .img-box .img-back {
+  -webkit-transform: rotate(-30deg);
+          transform: rotate(-30deg);
+  width: 80%;
+  -webkit-filter: blur(2px);
+          filter: blur(2px);
+  opacity: 0.6;
+  z-index: 1;
+}
+
+.search-box .container .img-box .img-middle {
+  -webkit-transform: rotate(-15deg);
+          transform: rotate(-15deg);
+  width: 80%;
+  opacity: 1;
+  z-index: 2;
+}
+
+.search-box .container .img-box .img-front {
+  margin-left: 1rem;
+  opacity: 1;
+  z-index: 3;
+  -webkit-box-shadow: 1px -1px 30px #c2c2c2;
+          box-shadow: 1px -1px 30px #c2c2c2;
+}
+
+.search-box .container .img-box .img-disable {
+  -webkit-transition: 2s all;
+  transition: 2s all;
+  z-index: -5;
+}
+
+.search-box .description-box {
+  width: 50%;
+  padding-top: 3rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: top;
+      -ms-flex-align: top;
+          align-items: top;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.search-box .description-box .text h2 {
+  color: #be7b40;
+  font-family: "Poppins";
+}
+
+.search-box .description-box .text #to-go {
+  color: #4cc5a7;
+}
+
+.search-box .description-box .text p {
+  color: #646464;
+  font-family: "Nunito Sans";
+}
+
+.search-box .description-box .text p span {
+  display: inline;
+  padding-top: 0.5rem;
+}
+
+.option-box {
+  height: 100vh;
+  width: 100%;
+  text-align: center;
+  font-family: "Roboto Slab";
+}
+
+.option-box .options {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.option-box .options .option {
+  width: 30%;
+}
+
+.option-box .options .option img {
+  width: 80%;
+  border-radius: 0.3rem;
+}
+
+.option-box .options-text {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  margin-top: -5rem;
+}
+
+.option-box .options-text .option-text {
+  width: 20%;
+  background-color: white;
+  -webkit-box-shadow: 0px 0px 50px 0px #c2c2c2;
+          box-shadow: 0px 0px 50px 0px #c2c2c2;
+  color: #0a160f;
+  border-radius: 0.3rem;
+  position: relative;
+}
+
+.option-box .options-text .option-text h3 {
+  color: #be7b40;
+  font-family: "Poppins";
+}
+
+.option-box .options-text .option-text p {
+  text-align: left;
+  color: #646464;
+  font-family: "Nunito Sans";
+}
+
+.option-box .options-text .option-text .price {
+  width: 30%;
+  background-color: #4cc5a7;
+  padding: 0.8rem 0 0.8rem 0;
+  border-radius: 0.3rem;
+  position: absolute;
+  left: 80%;
+  color: #e4f5f1;
+}
+
+.slide-show {
+  width: 100%;
+  height: 100vh;
+  background-image: url("../img/background2.jpg");
+  background-size: cover;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.slide-show .quotes {
+  padding: 5rem;
+  text-align: center;
+  width: 40%;
+  height: 60%;
+  background-color: #008060;
+  margin-right: 8rem;
+  opacity: 0.9;
+  color: #e4f5f1;
+}
+
+.slide-show .quotes h4 {
+  font-family: "Dancing Script";
+  font-size: 2rem !important;
+  line-height: 3rem;
+}
+
+.slide-show .quotes h5 {
+  font-family: "Dawning of a New Day";
+  font-size: 1.7rem;
+}
+
+.slide-show .quotes .carousel-indicators li {
+  height: 15px;
+  width: 15px;
+  border-radius: 50%;
+}
+
+.slide-show .quotes .carousel-indicators li.active {
+  background-color: #e4f5f1;
+}
+
+.slide-show .quotes .carousel-indicators li:not(.active) {
+  background-color: #4cc5a7;
+  opacity: 1;
+}
+
+.slide-show .quotes .carousel-inner .carousel-item {
+  height: 400px;
+}
+
+.location {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  height: 100vh;
+}
+
+.location .location-description {
+  width: 50%;
+}
+
+.location .location-image {
+  width: 50%;
+}
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="assets/css/fonts.css">
+    <link rel="stylesheet" href="assets/css/variables.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script src="assets/js/script.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-sm navbar-light mt-0 pt-0 w-100 ">
+        <div class="container">
+            <a class="navbar-brand" href="#">verso</a>
+            <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse"
+                data-target="#collapsibleNavId" aria-controls="collapsibleNavId" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="collapsibleNavId">
+                <ul class="navbar-nav ml-auto  mt-lg-0">
+                    <li class="nav-item active mx-4">
+                        <a class="nav-link hover pt-4" href="#">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item mx-4">
+                        <a class="nav-link hover pt-4" href="#">Bookings</a>
+                    </li>
+                    <li class="nav-item mx-4">
+                        <a class="nav-link hover pt-4" href="#">Gallery</a>
+                    </li>
+                    <li class="nav-item mx-4">
+                        <a class="nav-link hover pt-4" href="#">Contact</a>
+                    </li>
+                    <li class="nav-item mx-4">
+                        <a class="nav-link pt-4" href="#">
+                            <span class="syte-language active">EN/</span>
+                            <span class="syte-language">ES</span></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <main>
+        <div id="welcome-box">
+            <div class="fog animated pulse infinite slower"></div>
+            <div class="down-fog animated pulse infinite slower"></div>
+            <div class="container text-right pr-5">
+                <h1 class="display-4">
+                    <span id="show-before">The heaven on earth </span><br>
+                    <span class="welcome-transition hover" id="show-after">just for you</span>
+
+                    <script>
+                        setTimeout(() => {
+                            document.querySelector('#show-before').setAttribute('show', true);
+                        }, 300);
+                        setTimeout(() => {
+                            document.querySelector('#show-after').setAttribute('show', true);
+                        }, 1200);
+
+                    </script>
+                </h1>
+
+            </div>
+            <div class="container search-bar text-center pt-4 px-0">
+                <form action="/">
+                    <div class="form-item mt-4">
+                        <label for="start-date">Start date</label>
+                        <input class="pt-2 pb-2 mt-1" type="date" value="" id="start-time">
+                        <script>
+                            document.querySelector("#start-time").value = new Date().toISOString().slice(0, 10);
+                        </script>
+                    </div>
+                    <div class="form-item mt-4">
+                        <label for="left-date">Left date</label>
+                        <input class="pt-2 pb-2 mt-1" type="date" value="" id="left-time">
+                        <script>
+                            var result = new Date();
+                            result.setDate(result.getDate() + 7);
+                            document.querySelector("#left-time").value = result.toISOString().slice(0, 10);
+                        </script>
+                    </div>
+                    <div class="form-item mt-4">
+                        <label for="adults">Adults</label>
+                        <input class="pt-2 pb-2 mt-1" type="number" value="1" placeholder="Adults">
+                    </div>
+                    <div class="form-item mt-4">
+                        <label for="children">Children</label>
+                        <input class="pt-2 pb-2 mt-1" type="number" value="0" placeholder="Children">
+                    </div>
+                    <div class="form-item mt-4">
+                        <label for="submit" id="submit-label">sfsdf</label>
+                        <input class="pt-2 pb-2 px-4" type="submit" value="BOOK NOW">
+                    </div>
+                </form>
+
+            </div>
+        </div>
+        <div class="search-box ">
+            <div class="container px-5">
+                <div class="img-box pt-5">
+                    <img class="gallery-image img-front" src="assets/img/pic6.jpg">
+                    <img class="gallery-image img-middle" src="assets/img/pic5.jpg">
+                    <img class="gallery-image img-back" src="assets/img/pic2.jpg">
+                    <img class="gallery-image img-disable" src="assets/img/pic4.jpg">
+                    <img class="gallery-image" src="assets/img/pic1.jpg">
+                    <img class="gallery-image" src="assets/img/pic3.jpg">
+                    <img class="gallery-image" src="assets/img/pic7.jpg">
+                </div>
+
+
+            </div>
+            <div class="description-box m-0 px-5">
+
+                <div class="text w-50">
+                    <h2>Discover Paradise</h2>
+                    <p class="pt-3">
+                        <span>The Mission District offers numerous restaurants, bars and clubs as well as a
+                            busy nightlife.</span>
+                        <span>And for those of you who enjoy shopping, you will find plenty
+                            of stores on Haight Street and Union Square. San Francisco’s gastronomical range is
+                            impressive. Owing to Mexican immigration, you can get good, inexpensive food in the Mexican
+                            bistros. </span>
+                        <span>However, you will also find excellent restaurants that serve
+                            hamburgers, steaks or seafood.</span>
+                        <span>San Francisco offers a number of tourist
+                            attractions. These include the lively Fisherman’s Wharf, the former penitentiary island,
+                            Alcatraz, and the charming fisherman’s village, Sausalito, north of the city.</span></p>
+                </div>
+                <div class="text w-25 pl-3 text-center">
+                    <h2 id="to-go">To G<img src="./assets/img/icons/middle-east.png" style="width: 16%;"></h2>
+                    <p class="places">
+                        <p class="mt-4">Ireland <br><img src="./assets/img/icons/ireland.png"></p>
+                        <p class="mt-4">Australia <br> <img src="./assets/img/icons/australia.png"></p>
+                        <p class="mt-4">South Korea <br> <img src="./assets/img/icons/south-korea.png"></p>
+                    </p>
+                </div>
+
+            </div>
+        </div>
+        <div class="option-box pt-5 ">
+            <h1 class="mb-5 pb-5">Rooms & Ratings</h1>
+            <div class="options mt-5">
+                <div class="option">
+                    <img src="./assets/img/hotel1.jpg">
+                </div>
+                <div class="option">
+                    <img src="./assets/img/hotel2.jpg" alt="">
+
+                </div>
+                <div class="option">
+                    <img src="./assets/img/hotel-3.jpg" alt="">
+                </div>
+            </div>
+            <div class="options-text">
+                <div class="option-text py-4">
+                    <h3>Grand Suite</h3>
+                    <p class="px-5 mt-3">In this globe of dotcom, there are a number of jobs which are insufficient
+                        without web. It works for people of any kind of age, quickly packing mobile pleasant.</p>
+                    <div class="price">
+                        <span>199$</span>
+                    </div>
+                </div>
+                <div class="option-text py-4">
+                    <h3>Superior Suite</h3>
+                    <p class="px-5 mt-3">In this globe of dotcom, there are a number of jobs which are insufficient
+                        without web. It works for people of any kind of age, quickly packing mobile pleasant.</p>
+                    <div class="price">
+                        <span>179$</span>
+                    </div>
+                </div>
+                <div class="option-text py-4">
+                    <h3>Double Suite</h3>
+                    <p class="px-5 mt-3">In this globe of dotcom, there are a number of jobs which are insufficient
+                        without web. It works for people of any kind of age, quickly packing mobile pleasant.</p>
+                    <div class="price">
+                        <span>130$</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+        <div class="slide-show">
+            <div class="quotes">
+                <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <h4>
+                                “Stuff your eyes with wonder, live as if you’d drop dead in ten seconds. See the world.
+                                It’s more fantastic than any dream made or paid for in factories.”
+                            </h4>
+                            <h5 class="mt-5"> - Ray Bradbury</h5>
+                        </div>
+                        <div class="carousel-item">
+                            <h4>
+                                “We travel, some of us forever, to seek other places, other lives, other souls.”
+                            </h4>
+                            <h5 class="mt-5"> – Anais Nin</h5>
+                            <h4 class="mt-5">“Work, travel, save, repeat.”</h4>
+                        </div>
+                        <div class="carousel-item">
+                            <h4>
+                                “The use of traveling is to regulate imagination with reality, and instead of thinking
+                                of how things may be, see them as they are.”
+                            </h4>
+                            <h5 class="mt-5"> – Samuel Johnson</h5>
+                        </div>
+                    </div>
+                    <ol class="carousel-indicators">
+                        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active mr-4"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="1" class="mr-4"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="2" class=""></li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+        <div class="location">
+            <div class="location-description">
+                <h2>Our Location</h2>
+                <h4>Hotel is located in the very heart of the city, close to the charming and picturesque Krakow Old Town is one of the best advantages of Amber Boutique Hotels.</h4>
+            </div>
+            <div class="location-image">
+
+            </div>
+        </div>
+    </main>
+</body>
+
+<script defer>
+    changeImage = () => {
+        let classes = [];
+        let elements = document.querySelectorAll('.gallery-image');
+        elements.forEach((element) => {
+            classes.push(element.classList[1]);
+            element.classList.remove(element.classList[1]);
+        });
+        for (i = elements.length - 1; i > 0; i--) {
+            if (classes[i - 1] != undefined) {
+                elements[i].classList.add(classes[i - 1]);
+            }
+        };
+        if (classes[elements.length - 1] != undefined) {
+            elements[0].classList.add(classes[elements.length - 1]);
+        }
+    }
+
+    setInterval(() => changeImage(), 3000);
+    $('.carousel').carousel({
+        interval: 7000
+    });
+</script>
+
+</html>
