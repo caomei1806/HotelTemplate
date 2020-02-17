@@ -440,13 +440,13 @@ nav .navbar-nav .nav-item .nav-link.hover:before {
 }
 
 .location .location-description h2 {
-  font-family: 'Roboto Slab';
+  font-family: "Roboto Slab";
   color: #be7b40;
   width: 70%;
 }
 
 .location .location-description h5 {
-  font-family: 'Nunito Sans';
+  font-family: "Nunito Sans";
   line-height: 2rem;
   color: #646464;
   width: 70%;
@@ -471,6 +471,46 @@ nav .navbar-nav .nav-item .nav-link.hover:before {
   font-weight: bold;
   width: 20%;
   color: #008060;
-  font-family: 'Roboto Slab';
+  font-family: "Roboto Slab";
+}
+
+footer {
+  height: 100vh;
+  width: 100%;
+  background-image: url("../img/footer5.jpg");
+  background-size: cover;
+  position: relative;
+}
+
+footer img {
+  position: absolute;
+  width: 50%;
+  -webkit-filter: brightness(1.1);
+          filter: brightness(1.1);
+}
+
+footer img:nth-child(3) {
+  top: -22%;
+  right: 75%;
+}
+
+footer img:nth-child(2) {
+  top: -30%;
+  right: 0%;
+}
+
+footer img:nth-child(4) {
+  top: -23%;
+  left: 10%;
+}
+
+footer .white-transition {
+  padding: 8px;
+  border-radius: 8px;
+  position: absolute;
+  z-index: 50;
+  width: 100%;
+  height: 70%;
+  background: -webkit-linear-gradient(top, white 20%, rgba(255, 255, 255, 0.5) 70%, rgba(255, 255, 255, 0) 100%);
 }
 /*# sourceMappingURL=style.css.map */
